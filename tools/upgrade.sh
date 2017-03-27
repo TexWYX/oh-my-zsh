@@ -24,6 +24,8 @@ printf "${BLUE}%s${NORMAL}\n" "Updating Oh My Zsh"
 cd "$ZSH"
 if git pull --rebase --stat origin master
 then
+  printf "${BLUE}%s${NORMAL}\n" "Updating Backup"
+  git push me master
   printf '%s' "$GREEN"
   printf '%s\n' '         __                                     __   '
   printf '%s\n' '  ____  / /_     ____ ___  __  __   ____  _____/ /_  '
